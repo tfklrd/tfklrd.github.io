@@ -8,7 +8,9 @@ source _config.sh
 ###################################################################################
 
 # Create the $OUTPUT directory if it does not exist yet
-mkdir -p $OUTPUT
+if [ -d "$OUTPUT" ]; then
+    mkdir -p $OUTPUT
+fi
 
 if [[ $TOC = true ]]
   then
