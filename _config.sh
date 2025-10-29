@@ -2,7 +2,7 @@
 
 # Site specific settings
 ###################################################################################
-DOMAIN=""
+DOMAIN="https://tfklrd.github.io/"
 TITLE="tfklrd"
 DESCRIPTION="nobody on the internet"
 COPYRIGHT="Copyright 2022,  tfklrd"
