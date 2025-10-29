@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Includes, rsync and Variables - Oh My!</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<!-- Content placed here will appear directly after the opening <body> tag -->
+<nav>
+    <a href="/">Home</a><span>&nbsp;/&nbsp;</span>
+    <a href="/blog">Blog</a><span>&nbsp;/&nbsp;</span>
+    <a href="/tweaks.html">Tweaks</a><span>&nbsp;/&nbsp;</span>
+    <a href="https://git.btxx.org/pblog">Download</a>
+</nav>
+<!-- Do not remove this opening article element -->
+<article>
+<header id="title-block-header">
+<h1 class="title">Includes, rsync and Variables - Oh My!</h1>
+<p class="date">Fri, 08 Jul 2022</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#default-header-footer-includes">Default &#x201C;header&#x201D; &amp; &#x201C;footer&#x201D; Includes</a></li>
+<li><a href="#syncing-changes-with-rsync">Syncing Changes with rsync</a></li>
+<li><a href="#on-the-horizon">On the Horizon&#x2026;</a></li>
+</ul>
+</nav>
+<p>Even though <code>pblog</code> was just launched a week ago, it has since been updated with some nice quality-of-life improvements.</p>
+<h3 id="default-header-footer-includes">Default &#x201C;header&#x201D; &amp; &#x201C;footer&#x201D; Includes</h3>
+<p>A new variable was added to the main <code>pblog.sh</code> configuration file called <code>INC_HEAD_FOOT</code>. By default this is set to <code>true</code> and simply pulls in two HTML files:</p>
+<ul>
+<li><code>_header.html</code>: all content within is placed directly after the opening <code>body</code> tag</li>
+<li><code>_footer.html</code>: all content within is placed directly before the closing <code>body</code> tag</li>
+</ul>
+<p>These includes are added to every outputted file from inside both the <code>posts</code> and <code>pages</code> directories on build.</p>
+<h3 id="syncing-changes-with-rsync">Syncing Changes with rsync</h3>
+<p>Although it adds another dependency to the project, I believe utilizing <code>rsync</code> for the generated files is far better then nuking the directory from orbit each time. This also provides a cleaner experience for users syncing their <code>_output</code> directory with their web server of choice.</p>
+<h3 id="on-the-horizon">On the Horizon&#x2026;</h3>
+<p>My plan was to also tackle the issue of &#x201C;auto rebuilds&#x201D; when running <code>pblog</code> locally. This became more of a headache than I initially estimated - so it was dropped from this patch. My hope is to get something up-and-running in the near future, while avoiding the inclusion of yet another major dependency. Anyone more experienced than myself in the ways of &#x201C;auto rebuilds&#x201D; is free to open a patch if they so desire!</p>
+<p>Thanks for your interest in these minor updates!</p>
+<p>P.S. Don&#x2019;t forget - if your website runs on <code>pblog</code> be sure to reach out and get it featured on the <a href="/">homepage</a>!</p>
+</article><!-- Do not remove this closing article element -->
+
+<!-- Content placed here will appear directly before the closing </body> tag -->
+<footer>
+    <br>
+    <hr>
+    <p><small>Powered by <a href="https://pblog.btxx.org">pblog</a><br>
+    Made with &hearts; for a simpler web.</small></p>
+</footer>
+</body>
+</html>
