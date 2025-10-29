@@ -19,6 +19,6 @@ POSTS_DIR="posts/"
 PAGES=$(find $PAGES_DIR -type f)
 POSTS=$(find $POSTS_DIR -type f)
 WEB_HTML="blog/"
-OUTPUT="_output/"
+OUTPUT="public/"
 TIME="01:00:00 EST"
 TTL="60"

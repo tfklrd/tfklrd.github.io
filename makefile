@@ -2,11 +2,11 @@
 
 .PHONY: build
 build:
-	bash pblog.sh > _output/feed.xml
-	xsltproc _output/feed.xml > _output/blog/index.html
+	bash pblog.sh > public/feed.xml
+	xsltproc public/feed.xml > public/blog/index.html
 
 serve: build
-	python3 -m http.server --directory _output/
+	python3 -m http.server --directory public/
 
 clean:
-	rm -rf _output/*
+	rm -rf public/*
