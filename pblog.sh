@@ -33,10 +33,11 @@ rm $POSTS_DIR*.html
 # Create the web browser-focused HTML versions for all pages
 # for i in $PAGES; do pandoc --css=style.css --ascii --metadata lang="$HTML_LANG" $TOC_TOGGLE $SYNTAX_TOGGLE --wrap=none -A _footer.html -B _header.html -s $i -o ${i%.*}.html; done;
 
-rsync $PAGES_DIR*.html $OUTPUT;
+# rsync $PAGES_DIR*.html $OUTPUT;
 # rm $PAGES_DIR*.html
 
 # Copy XSLT, stylesheet, and media files
+rsync index.html $OUTPUT;
 rsync rss.xsl $OUTPUT;
 rsync style.css $OUTPUT;
 rsync -r media $OUTPUT;
