@@ -8,7 +8,7 @@ source _config.sh
 ###################################################################################
 
 # Create the $OUTPUT directory if it does not exist yet
-if [ -d "$OUTPUT" ]; then
+if [ ! -d "$OUTPUT" ]; then
     mkdir -p $OUTPUT
 fi
 
@@ -64,15 +64,6 @@ for file in $OUTPUT$WEB_HTML*; do
 POST_DATE=$(sed -n 's|^<p class="date">\([^<]*\)</p>$|\1|p' $file)
 POST_TITLE=$(sed -n 's|^<h1 class="title">\([^<]*\)</h1>$|\1|p' $file)
 POST_CONTENT=$(sed -n '/<article>/,/<\/article>/p' $file | sed -e '1s/.*<article>//' -e '$s/<\/article>.*//')
-
-if [[ $OS = "BSD" ]]
-then
-  CAT_DATE=$(gdate -d "$(sed -n 's|^<p class="date">\([^<]*\)</p>$|\1|p' $file)" +"%Y/%m/%d/%u")
-  POST_DATE=$(gdate -d "$(sed -n 's|^<p class="date">\([^<]*\)</p>$|\1|p' $file)" +"%a, %d %b %Y")
-else
-  CAT_DATE=$(date -d "$(sed -n 's|^<p class="date">\([^<]*\)</p>$|\1|p' $file)" +"%Y/%m/%d/%u")
-  POST_DATE=$(date -d "$(sed -n 's|^<p class="date">\([^<]*\)</p>$|\1|p' $file)" +"%a, %d %b %Y")
-fi
 
 echo "<item>
   <pubDate>$POST_DATE $TIME</pubDate>
