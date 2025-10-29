@@ -9,4 +9,4 @@ serve: build
 	python3 -m http.server --directory _output/
 
 clean:
-	rm _output/*
+	rm -rf _output/*
