@@ -43,7 +43,9 @@ rsync style.css $OUTPUT;
 rsync -r media $OUTPUT;
 
 # Remove the default blog index to avoid pulling into the XML feed
-rm $OUTPUT$WEB_HTML/index.html
+if [ -f "$OUTPUT$WEB_HTML/index.html" ]; then
+    rm $OUTPUT"$WEB_HTML"index.html
+fi
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>
 <?xml-stylesheet href=\"rss.xsl\" type=\"text/xsl\"?>
