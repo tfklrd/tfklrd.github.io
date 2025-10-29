@@ -3,7 +3,7 @@
 <rss version="2.0">
   <channel>
     <title>tfklrd</title>
-    <link></link>
+    <link>https://tfklrd.github.io/</link>
     <description>nobody on the internet</description>
     <copyright>Copyright 2022,  tfklrd</copyright>
     <ttl>60</ttl>
@@ -11,7 +11,7 @@
   <pubDate>Fri, 15 Jul 2022 01:00:00 EST</pubDate>
   <category>2022/07/15/5</category>
   <title>First Community Patch &amp; Tweaks</title>
-  <link>/blog/community-patch.html</link>
+  <link>https://tfklrd.github.io//blog/community-patch.html</link>
   <description><![CDATA[
 <header id="title-block-header">
 <h1 class="title">First Community Patch &amp; Tweaks</h1>
@@ -53,13 +53,13 @@
 <p>That&#x2019;s all for now, thanks for reading!</p>
 <p>&#x2013; Brad</p>]]></description>
   <author>tfklrd</author>
-  <guid>/blog/community-patch.html</guid>
+  <guid>https://tfklrd.github.io//blog/community-patch.html</guid>
   </item>
 <item>
   <pubDate>Wed, 27 Jul 2022 01:00:00 EST</pubDate>
   <category>2022/07/27/3</category>
   <title>New Default Styling and 2x Faster!</title>
-  <link>/blog/default-styles.html</link>
+  <link>https://tfklrd.github.io//blog/default-styles.html</link>
   <description><![CDATA[
 <header id="title-block-header">
 <h1 class="title">New Default Styling and 2x Faster!</h1>
@@ -113,13 +113,13 @@
 <p>Thanks for reading,</p>
 <p>&#x2013; Brad</p>]]></description>
   <author>tfklrd</author>
-  <guid>/blog/default-styles.html</guid>
+  <guid>https://tfklrd.github.io//blog/default-styles.html</guid>
   </item>
 <item>
   <pubDate>Mon, 04 Jul 2022 01:00:00 EST</pubDate>
   <category>2022/07/04/1</category>
   <title>Introducing pblog</title>
-  <link>/blog/pblog-intro.html</link>
+  <link>https://tfklrd.github.io//blog/pblog-intro.html</link>
   <description><![CDATA[
 <header id="title-block-header">
 <h1 class="title">Introducing pblog</h1>
@@ -196,13 +196,13 @@
 <p>There isn&#x2019;t much else to say. <code>pblog</code> is as static or flexible as you chose it to be. If you have any ideas on how to improve things or come across any bugs, please <a href="https://git.sr.ht/~bt/pblog">open a ticket or PR on the official repo</a>.</p>
 <p>Thanks and happy blogging with <em>pblog</em>!</p>]]></description>
   <author>tfklrd</author>
-  <guid>/blog/pblog-intro.html</guid>
+  <guid>https://tfklrd.github.io//blog/pblog-intro.html</guid>
   </item>
 <item>
   <pubDate>Thu, 30 Jun 2022 01:00:00 EST</pubDate>
   <category>2022/06/30/4</category>
   <title>Announcing pblog</title>
-  <link>/blog/pblog-launch.html</link>
+  <link>https://tfklrd.github.io//blog/pblog-launch.html</link>
   <description><![CDATA[
 <header id="title-block-header">
 <h1 class="title">Announcing pblog</h1>
@@ -212,13 +212,13 @@
 <p>There isn&#x2019;t much else to say. All details and instructions on how to start your own pblog can be found on the <a href="https://pblog.btxx.org">main homepage for this project</a>.</p>
 <p>Thanks for reading!</p>]]></description>
   <author>tfklrd</author>
-  <guid>/blog/pblog-launch.html</guid>
+  <guid>https://tfklrd.github.io//blog/pblog-launch.html</guid>
   </item>
 <item>
   <pubDate>Fri, 08 Jul 2022 01:00:00 EST</pubDate>
   <category>2022/07/08/5</category>
   <title>Includes, rsync and Variables - Oh My!</title>
-  <link>/blog/small-patch.html</link>
+  <link>https://tfklrd.github.io//blog/small-patch.html</link>
   <description><![CDATA[
 <header id="title-block-header">
 <h1 class="title">Includes, rsync and Variables - Oh My!</h1>
@@ -246,7 +246,7 @@
 <p>Thanks for your interest in these minor updates!</p>
 <p>P.S. Don&#x2019;t forget - if your website runs on <code>pblog</code> be sure to reach out and get it featured on the <a href="/">homepage</a>!</p>]]></description>
   <author>tfklrd</author>
-  <guid>/blog/small-patch.html</guid>
+  <guid>https://tfklrd.github.io//blog/small-patch.html</guid>
   </item>
   </channel>
 </rss>
