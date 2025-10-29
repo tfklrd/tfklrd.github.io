@@ -14,9 +14,9 @@ HTML_LANG="en_US" # Your document (HTML) language setting
 ###################################################################################
 TOC=true
 SYNTAX=true
-PAGES_DIR="pages/"
+#PAGES_DIR="pages/"
 POSTS_DIR="posts/"
-PAGES=$(find $PAGES_DIR -type f)
+#PAGES=$(find $PAGES_DIR -type f)
 POSTS=$(find $POSTS_DIR -type f)
 WEB_HTML="blog/"
 OUTPUT="public/"
