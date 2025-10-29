@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>First Community Patch &amp; Tweaks</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<!-- Content placed here will appear directly after the opening <body> tag -->
+<nav>
+    <a href="/">Home</a><span>&nbsp;/&nbsp;</span>
+    <a href="/blog">Blog</a><span>&nbsp;/&nbsp;</span>
+    <a href="/tweaks.html">Tweaks</a><span>&nbsp;/&nbsp;</span>
+    <a href="https://git.btxx.org/pblog">Download</a>
+</nav>
+<!-- Do not remove this opening article element -->
+<article>
+<header id="title-block-header">
+<h1 class="title">First Community Patch &amp; Tweaks</h1>
+<p class="date">Fri, 15 Jul 2022</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#the-changes" id="toc-the-changes">The Changes</a></li>
+<li><a href="#some-features-left-behind" id="toc-some-features-left-behind">Some Features Left Behind&#x2026;</a></li>
+<li><a href="#introducing-tweaks" id="toc-introducing-tweaks">Introducing &#x201C;Tweaks&#x201D;</a></li>
+</ul>
+</nav>
+<p><code>pblog</code> has received its first community patch! By &#x201C;community&#x201D; I mean someone other than myself has helped make this blog generator even better. So special thanks to <a href="https://matthewgraybosch.com/">Matthew Graybosch</a> for contributing to this humble project and patching in some solid quality of life improvements.</p>
+<p>This is why open source is great: smarter people can help fix your mashed-up spaghetti code!</p>
+<h3 id="the-changes">The Changes</h3>
+<ol type="1">
+<li>Both pages and posts now generated <em>Table of Contents</em> by default
+<ul>
+<li>You have the ability to disable this site-wide in the <code>pblog</code> config</li>
+</ul></li>
+<li>Ability to disable Pandoc generated syntax highlighting</li>
+<li><code>xsltproc</code> will now generate HTML5 and include the RSS feed description under the title
+<ul>
+<li>See it live on the <a href="/feed.xml">main RSS XML feed</a></li>
+</ul></li>
+<li>New metadata variable (<code>HTML_LANG</code>) in the <code>pblog.sh</code> config</li>
+<li>Generated pages and posts now have &#x201C;Table of Contents&#x201D; by default
+<ul>
+<li>This can be disabled in individual files with <code>toc: false</code></li>
+</ul></li>
+<li>Cleaned up redundant find statements</li>
+</ol>
+<h3 id="some-features-left-behind">Some Features Left Behind&#x2026;</h3>
+<p>Also suggested in this patch was the addition of more advanced image manipulation via <code>ImageMagick</code>. This additional feature was pretty great from my testing but I felt as though adding an extra dependency and <em>slightly</em> more complex settings to <code>pblog</code> was moving things further from simplicity.</p>
+<p><strong>BUT</strong> - that doesn&#x2019;t mean you can&#x2019;t take this great feature with you!</p>
+<h3 id="introducing-tweaks">Introducing &#x201C;Tweaks&#x201D;</h3>
+<p>I feel that <code>pblog</code> should always remain as simple as possible at the core. Let people get something up-and-running with the least amount of friction as possible. But I know that some users might want to squeeze just a <em>little</em> bit more out of it. This is where the new <strong>Tweaks</strong> section comes in.</p>
+<p>Feel free to check out the <a href="/tweaks.html">official Tweaks page</a> and don&#x2019;t be afraid to add your own by opening a patch-set!</p>
+<p>That&#x2019;s all for now, thanks for reading!</p>
+<p>&#x2013; Brad</p>
+</article><!-- Do not remove this closing article element -->
+
+<!-- Content placed here will appear directly before the closing </body> tag -->
+<footer>
+    <br>
+    <hr>
+    <p><small>Powered by <a href="https://pblog.btxx.org">pblog</a><br>
+    Made with &hearts; for a simpler web.</small></p>
+</footer>
+</body>
+</html>

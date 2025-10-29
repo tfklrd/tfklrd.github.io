@@ -1,0 +1,50 @@
+html {
+    background:#f9f9f9;
+}
+
+body {
+    background: #fff;
+    border: 1px solid lightgrey;
+    margin: 1em auto;
+    max-width: 75ch;
+    padding: 10px;
+    line-height: 1.4;
+}
+
+p code, li code {
+    border: 1px solid brown;
+    border-radius: 2px;
+    color: brown;
+    padding: 1px 2px;
+}
+.sourceCode {
+	overflow: auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+pre {
+    background: #f9f9f9;
+    border: 1px solid lightgrey;
+    padding: 5px;
+}
+
+#TOC {
+    border: 1px solid;
+    position: relative;
+}
+#TOC:before {
+    border-bottom: 1px solid;
+    content: 'Table of Contents';
+    display: block;
+    font-weight: bold;
+    padding: 5px;
+    position: relative;
+}
+
+.date {
+    color: grey;
+}
