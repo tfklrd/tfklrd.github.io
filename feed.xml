@@ -80,30 +80,30 @@
 <p>The styling changes aren&#x2019;t anything ground breaking. They simply center the main content and add a little more visual separation of the content and backdrop. Again, you can customize <code>pblog</code> as you see fit, but having a sane default is always nice.</p>
 <h2 id="new-config-setup">New Config Setup</h2>
 <p>Since updates and performance fixes might continue to come through in the future, I didn&#x2019;t want to make users play around with their default configuration every single time. Now, all main configuration is handled in the new <code>_config.sh</code> file.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Site specific settings</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">###################################################################################</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">DOMAIN</span><span class="op">=</span><span class="st">&quot;https://pblog.bt.ht&quot;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">TITLE</span><span class="op">=</span><span class="st">&quot;pblog&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">DESCRIPTION</span><span class="op">=</span><span class="st">&quot;Pandoc static blog generator&quot;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="va">COPYRIGHT</span><span class="op">=</span><span class="st">&quot;Copyright 2022, Bradley Taunt&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="va">AUTHOR</span><span class="op">=</span><span class="st">&quot;brad@bt.ht (Bradley Taunt)&quot;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="va">OS</span><span class="op">=</span><span class="st">&quot;Linux&quot;</span> <span class="co"># &quot;Linux&quot; for Linux, &quot;BSD&quot; for BSD Systems (including MacOS)</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="va">HTML_LANG</span><span class="op">=</span><span class="st">&quot;en_US&quot;</span> <span class="co"># Your document (HTML) language setting</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Blog structure settings (most users should use these defaults)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">###################################################################################</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="va">TOC</span><span class="op">=</span>true</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="va">SYNTAX</span><span class="op">=</span>true</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="va">PAGES_DIR</span><span class="op">=</span><span class="st">&quot;pages/&quot;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="va">POSTS_DIR</span><span class="op">=</span><span class="st">&quot;posts/&quot;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="va">PAGES</span><span class="op">=</span><span class="va">$(</span><span class="fu">find</span> <span class="va">$PAGES_DIR</span> <span class="at">-type</span> f<span class="va">)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="va">POSTS</span><span class="op">=</span><span class="va">$(</span><span class="fu">find</span> <span class="va">$POSTS_DIR</span> <span class="at">-type</span> f<span class="va">)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="va">WEB_HTML</span><span class="op">=</span><span class="st">&quot;blog/&quot;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="va">OUTPUT</span><span class="op">=</span><span class="st">&quot;_output/&quot;</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="va">TIME</span><span class="op">=</span><span class="st">&quot;01:00:00 EST&quot;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="va">TTL</span><span class="op">=</span><span class="st">&quot;60&quot;</span></span></code></pre></div>
+<pre class="sh"><code>#!/bin/sh
+
+# Site specific settings
+###################################################################################
+DOMAIN=&quot;https://pblog.bt.ht&quot;
+TITLE=&quot;pblog&quot;
+DESCRIPTION=&quot;Pandoc static blog generator&quot;
+COPYRIGHT=&quot;Copyright 2022, Bradley Taunt&quot;
+AUTHOR=&quot;brad@bt.ht (Bradley Taunt)&quot;
+OS=&quot;Linux&quot; # &quot;Linux&quot; for Linux, &quot;BSD&quot; for BSD Systems (including MacOS)
+HTML_LANG=&quot;en_US&quot; # Your document (HTML) language setting
+
+# Blog structure settings (most users should use these defaults)
+###################################################################################
+TOC=true
+SYNTAX=true
+PAGES_DIR=&quot;pages/&quot;
+POSTS_DIR=&quot;posts/&quot;
+PAGES=$(find $PAGES_DIR -type f)
+POSTS=$(find $POSTS_DIR -type f)
+WEB_HTML=&quot;blog/&quot;
+OUTPUT=&quot;_output/&quot;
+TIME=&quot;01:00:00 EST&quot;
+TTL=&quot;60&quot;</code></pre>
 <p>Feels cleaner already, right?</p>
 <h2 id="cutting-the-build-time-in-half">Cutting the Build Time in Half</h2>
 <p>I must give big kudos to <a href="https://matthewgraybosch.com">Matthew Graybosch</a> for inspiring this pretty big improvement. After some discussion over emails we both agreed that it seemed overkill to render the blog content twice (once for the XML feed itself and then again for all posts listed under <code>blog</code>). Performance wasn&#x2019;t the initial goal when I first launched this project, but now that the dust has settled it seemed appropriate to go back and fix some things.</p>
@@ -168,14 +168,14 @@
 <h3 id="posts-and-pages">Posts and Pages</h3>
 <p>Posts and pages are written via Markdown inside the <code>posts</code> and <code>pages</code> folders respectively.</p>
 <p>Individual posts require the following headers (take note of the date format):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Blog Title</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> Mon, 04 Jul 2022</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<pre class="yaml"><code>---
+title: Blog Title
+date: Mon, 04 Jul 2022
+---</code></pre>
 <p>while individual pages only require a <code>title</code>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Page Title</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<pre class="yaml"><code>---
+title: Page Title
+---</code></pre>
 <p>This makes for an easier switch over from other SSG platforms like Jekyll or Hugo.</p>
 <h3 id="the-build-process">The Build Process</h3>
 <p>The main variables at the top of the <code>pblog.sh</code> file need to edited with your own details before generating your website. Those variables are fairly self-explanatory and simple to edit.</p>
