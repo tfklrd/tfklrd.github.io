@@ -13,7 +13,7 @@ HTML_LANG="en_US" # Your document (HTML) language setting
 # Blog structure settings (most users should use these defaults)
 ###################################################################################
 TOC=true
-SYNTAX=true
+SYNTAX=false
 PAGES_DIR="pages/"
 POSTS_DIR="posts/"
 PAGES=$(find $PAGES_DIR -type f)
