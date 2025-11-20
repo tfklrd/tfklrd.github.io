@@ -8,122 +8,14 @@
     <copyright>Copyright 2022,  tfklrd</copyright>
     <ttl>60</ttl>
 <item>
-  <pubDate>Fri, 15 Jul 2022 01:00:00 EST</pubDate>
+  <pubDate>Tue, 18 Nov 2025 01:00:00 EST</pubDate>
   <category></category>
-  <title>First Community Patch &amp; Tweaks</title>
-  <link>https://tfklrd.github.io/blog/community-patch.html</link>
+  <title>Introducing</title>
+  <link>https://tfklrd.github.io/blog/intro.html</link>
   <description><![CDATA[
 <header id="title-block-header">
-<h1 class="title">First Community Patch &amp; Tweaks</h1>
-<p class="date">Fri, 15 Jul 2022</p>
-</header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#the-changes" id="toc-the-changes">The Changes</a></li>
-<li><a href="#some-features-left-behind" id="toc-some-features-left-behind">Some Features Left Behind&#x2026;</a></li>
-<li><a href="#introducing-tweaks" id="toc-introducing-tweaks">Introducing &#x201C;Tweaks&#x201D;</a></li>
-</ul>
-</nav>
-<p><code>pblog</code> has received its first community patch! By &#x201C;community&#x201D; I mean someone other than myself has helped make this blog generator even better. So special thanks to <a href="https://matthewgraybosch.com/">Matthew Graybosch</a> for contributing to this humble project and patching in some solid quality of life improvements.</p>
-<p>This is why open source is great: smarter people can help fix your mashed-up spaghetti code!</p>
-<h3 id="the-changes">The Changes</h3>
-<ol type="1">
-<li>Both pages and posts now generated <em>Table of Contents</em> by default
-<ul>
-<li>You have the ability to disable this site-wide in the <code>pblog</code> config</li>
-</ul></li>
-<li>Ability to disable Pandoc generated syntax highlighting</li>
-<li><code>xsltproc</code> will now generate HTML5 and include the RSS feed description under the title
-<ul>
-<li>See it live on the <a href="/feed.xml">main RSS XML feed</a></li>
-</ul></li>
-<li>New metadata variable (<code>HTML_LANG</code>) in the <code>pblog.sh</code> config</li>
-<li>Generated pages and posts now have &#x201C;Table of Contents&#x201D; by default
-<ul>
-<li>This can be disabled in individual files with <code>toc: false</code></li>
-</ul></li>
-<li>Cleaned up redundant find statements</li>
-</ol>
-<h3 id="some-features-left-behind">Some Features Left Behind&#x2026;</h3>
-<p>Also suggested in this patch was the addition of more advanced image manipulation via <code>ImageMagick</code>. This additional feature was pretty great from my testing but I felt as though adding an extra dependency and <em>slightly</em> more complex settings to <code>pblog</code> was moving things further from simplicity.</p>
-<p><strong>BUT</strong> - that doesn&#x2019;t mean you can&#x2019;t take this great feature with you!</p>
-<h3 id="introducing-tweaks">Introducing &#x201C;Tweaks&#x201D;</h3>
-<p>I feel that <code>pblog</code> should always remain as simple as possible at the core. Let people get something up-and-running with the least amount of friction as possible. But I know that some users might want to squeeze just a <em>little</em> bit more out of it. This is where the new <strong>Tweaks</strong> section comes in.</p>
-<p>Feel free to check out the <a href="/tweaks.html">official Tweaks page</a> and don&#x2019;t be afraid to add your own by opening a patch-set!</p>
-<p>That&#x2019;s all for now, thanks for reading!</p>
-<p>&#x2013; Brad</p>]]></description>
-  <author>tfklrd</author>
-  <guid>https://tfklrd.github.io/blog/community-patch.html</guid>
-  </item>
-<item>
-  <pubDate>Wed, 27 Jul 2022 01:00:00 EST</pubDate>
-  <category></category>
-  <title>New Default Styling and 2x Faster!</title>
-  <link>https://tfklrd.github.io/blog/default-styles.html</link>
-  <description><![CDATA[
-<header id="title-block-header">
-<h1 class="title">New Default Styling and 2x Faster!</h1>
-<p class="date">Wed, 27 Jul 2022</p>
-</header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#the-default-theme" id="toc-the-default-theme">The Default &#x201C;Theme&#x201D;</a></li>
-<li><a href="#new-config-setup" id="toc-new-config-setup">New Config Setup</a></li>
-<li><a href="#cutting-the-build-time-in-half" id="toc-cutting-the-build-time-in-half">Cutting the Build Time in Half</a></li>
-<li><a href="#far-from-perfect" id="toc-far-from-perfect">Far From Perfect</a></li>
-</ul>
-</nav>
-<p>If it wasn&#x2019;t already obvious, this project has received a minor styling overhaul. But looks weren&#x2019;t the only thing updated with this latest patch.</p>
-<p>The total build process time is now <em>two times faster</em>!</p>
-<p>Keep reading for more details.</p>
-<h2 id="the-default-theme">The Default &#x201C;Theme&#x201D;</h2>
-<p>The styling changes aren&#x2019;t anything ground breaking. They simply center the main content and add a little more visual separation of the content and backdrop. Again, you can customize <code>pblog</code> as you see fit, but having a sane default is always nice.</p>
-<h2 id="new-config-setup">New Config Setup</h2>
-<p>Since updates and performance fixes might continue to come through in the future, I didn&#x2019;t want to make users play around with their default configuration every single time. Now, all main configuration is handled in the new <code>_config.sh</code> file.</p>
-<pre class="sh"><code>#!/bin/sh
-
-# Site specific settings
-###################################################################################
-DOMAIN=&quot;https://pblog.bt.ht&quot;
-TITLE=&quot;pblog&quot;
-DESCRIPTION=&quot;Pandoc static blog generator&quot;
-COPYRIGHT=&quot;Copyright 2022, Bradley Taunt&quot;
-AUTHOR=&quot;brad@bt.ht (Bradley Taunt)&quot;
-OS=&quot;Linux&quot; # &quot;Linux&quot; for Linux, &quot;BSD&quot; for BSD Systems (including MacOS)
-HTML_LANG=&quot;en_US&quot; # Your document (HTML) language setting
-
-# Blog structure settings (most users should use these defaults)
-###################################################################################
-TOC=true
-SYNTAX=true
-PAGES_DIR=&quot;pages/&quot;
-POSTS_DIR=&quot;posts/&quot;
-PAGES=$(find $PAGES_DIR -type f)
-POSTS=$(find $POSTS_DIR -type f)
-WEB_HTML=&quot;blog/&quot;
-OUTPUT=&quot;_output/&quot;
-TIME=&quot;01:00:00 EST&quot;
-TTL=&quot;60&quot;</code></pre>
-<p>Feels cleaner already, right?</p>
-<h2 id="cutting-the-build-time-in-half">Cutting the Build Time in Half</h2>
-<p>I must give big kudos to <a href="https://matthewgraybosch.com">Matthew Graybosch</a> for inspiring this pretty big improvement. After some discussion over emails we both agreed that it seemed overkill to render the blog content twice (once for the XML feed itself and then again for all posts listed under <code>blog</code>). Performance wasn&#x2019;t the initial goal when I first launched this project, but now that the dust has settled it seemed appropriate to go back and fix some things.</p>
-<p><code>pblog</code> now only needs to render the blog posts found in the <code>posts</code> directory <em>once</em>. It still produces semantic XML and keeps the webview versions of the articles looking solid. Overall I&#x2019;m pretty happy with this <em>little</em> improvement - it should pretty noticeable on projects rendering many posts.</p>
-<h2 id="far-from-perfect">Far From Perfect</h2>
-<p>This project is still very much in it&#x2019;s infancy. So if you notice something odd or broken in your own testing, please don&#x2019;t hesitate to open a patch or simply bring up the issue!</p>
-<p>Thanks for reading,</p>
-<p>&#x2013; Brad</p>]]></description>
-  <author>tfklrd</author>
-  <guid>https://tfklrd.github.io/blog/default-styles.html</guid>
-  </item>
-<item>
-  <pubDate>Mon, 04 Jul 2022 01:00:00 EST</pubDate>
-  <category></category>
-  <title>Introducing pblog</title>
-  <link>https://tfklrd.github.io/blog/pblog-intro.html</link>
-  <description><![CDATA[
-<header id="title-block-header">
-<h1 class="title">Introducing pblog</h1>
-<p class="date">Mon, 04 Jul 2022</p>
+<h1 class="title">Introducing</h1>
+<p class="date">Tue, 18 Nov 2025</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -196,57 +88,7 @@ title: Page Title
 <p>There isn&#x2019;t much else to say. <code>pblog</code> is as static or flexible as you chose it to be. If you have any ideas on how to improve things or come across any bugs, please <a href="https://git.sr.ht/~bt/pblog">open a ticket or PR on the official repo</a>.</p>
 <p>Thanks and happy blogging with <em>pblog</em>!</p>]]></description>
   <author>tfklrd</author>
-  <guid>https://tfklrd.github.io/blog/pblog-intro.html</guid>
-  </item>
-<item>
-  <pubDate>Thu, 30 Jun 2022 01:00:00 EST</pubDate>
-  <category></category>
-  <title>Announcing pblog</title>
-  <link>https://tfklrd.github.io/blog/pblog-launch.html</link>
-  <description><![CDATA[
-<header id="title-block-header">
-<h1 class="title">Announcing pblog</h1>
-<p class="date">Thu, 30 Jun 2022</p>
-</header>
-<p>It&#x2019;s time to celebrate! The official launch of <code>pblog</code> happened today.</p>
-<p>There isn&#x2019;t much else to say. All details and instructions on how to start your own pblog can be found on the <a href="https://pblog.btxx.org">main homepage for this project</a>.</p>
-<p>Thanks for reading!</p>]]></description>
-  <author>tfklrd</author>
-  <guid>https://tfklrd.github.io/blog/pblog-launch.html</guid>
-  </item>
-<item>
-  <pubDate>Fri, 08 Jul 2022 01:00:00 EST</pubDate>
-  <category></category>
-  <title>Includes, rsync and Variables - Oh My!</title>
-  <link>https://tfklrd.github.io/blog/small-patch.html</link>
-  <description><![CDATA[
-<header id="title-block-header">
-<h1 class="title">Includes, rsync and Variables - Oh My!</h1>
-<p class="date">Fri, 08 Jul 2022</p>
-</header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#default-header-footer-includes" id="toc-default-header-footer-includes">Default &#x201C;header&#x201D; &amp; &#x201C;footer&#x201D; Includes</a></li>
-<li><a href="#syncing-changes-with-rsync" id="toc-syncing-changes-with-rsync">Syncing Changes with rsync</a></li>
-<li><a href="#on-the-horizon" id="toc-on-the-horizon">On the Horizon&#x2026;</a></li>
-</ul>
-</nav>
-<p>Even though <code>pblog</code> was just launched a week ago, it has since been updated with some nice quality-of-life improvements.</p>
-<h3 id="default-header-footer-includes">Default &#x201C;header&#x201D; &amp; &#x201C;footer&#x201D; Includes</h3>
-<p>A new variable was added to the main <code>pblog.sh</code> configuration file called <code>INC_HEAD_FOOT</code>. By default this is set to <code>true</code> and simply pulls in two HTML files:</p>
-<ul>
-<li><code>_header.html</code>: all content within is placed directly after the opening <code>body</code> tag</li>
-<li><code>_footer.html</code>: all content within is placed directly before the closing <code>body</code> tag</li>
-</ul>
-<p>These includes are added to every outputted file from inside both the <code>posts</code> and <code>pages</code> directories on build.</p>
-<h3 id="syncing-changes-with-rsync">Syncing Changes with rsync</h3>
-<p>Although it adds another dependency to the project, I believe utilizing <code>rsync</code> for the generated files is far better then nuking the directory from orbit each time. This also provides a cleaner experience for users syncing their <code>_output</code> directory with their web server of choice.</p>
-<h3 id="on-the-horizon">On the Horizon&#x2026;</h3>
-<p>My plan was to also tackle the issue of &#x201C;auto rebuilds&#x201D; when running <code>pblog</code> locally. This became more of a headache than I initially estimated - so it was dropped from this patch. My hope is to get something up-and-running in the near future, while avoiding the inclusion of yet another major dependency. Anyone more experienced than myself in the ways of &#x201C;auto rebuilds&#x201D; is free to open a patch if they so desire!</p>
-<p>Thanks for your interest in these minor updates!</p>
-<p>P.S. Don&#x2019;t forget - if your website runs on <code>pblog</code> be sure to reach out and get it featured on the <a href="/">homepage</a>!</p>]]></description>
-  <author>tfklrd</author>
-  <guid>https://tfklrd.github.io/blog/small-patch.html</guid>
+  <guid>https://tfklrd.github.io/blog/intro.html</guid>
   </item>
   </channel>
 </rss>
