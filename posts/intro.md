@@ -1,6 +1,6 @@
 ---
-title: Introducing pblog
-date: Mon, 04 Jul 2022
+title: Introducing
+date: Tue, 18 Nov 2025
 ---
 
 This article is a *living document*. It will always have the most up-to-date information on getting started with `pblog`.
