@@ -31,7 +31,7 @@
               .date {
                   display: block;
                   font-family: monospace;
-                  margin-bottom: 1em;
+                  margin-bottom: 2em;
                   overflow: hidden;
                   white-space: nowrap;
                   width: 16ch;
