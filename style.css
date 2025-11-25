@@ -92,7 +92,7 @@ a:hover {
 }
 
 #TOC ul {
-    list-style-type: none;
+    list-style-type: decimal;
 }
 
 .date {

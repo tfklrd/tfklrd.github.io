@@ -1,96 +1,30 @@
 ---
-title: Introducing
-date: Tue, 18 Nov 2025
+title: why i created this blog
+date: Fri, 21 Nov 2025
 ---
 
-This article is a *living document*. It will always have the most up-to-date information on getting started with `pblog`.
+# why
+i really don't know why
 
-**Last Updated**: July 27, 2022
+# some text for testing
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae leo rhoncus, eleifend orci eget, facilisis diam. Nullam faucibus felis sem, vel venenatis tortor fringilla ac. Sed varius dui et magna blandit placerat et et ipsum. Vestibulum sapien metus, dignissim vitae lorem in, egestas laoreet justo. Nam ac eros in nisl bibendum cursus. Suspendisse at pharetra ligula. Donec maximus sodales eros eu volutpat. Nullam ut est in ex hendrerit dignissim at eget velit.
 
----
+Fusce venenatis elit fermentum commodo dignissim. Praesent ac lectus lobortis, rutrum quam in, mattis lorem. Vivamus dignissim venenatis felis id consequat. Phasellus ligula tellus, rhoncus et elit ut, dictum mollis dolor. Vestibulum consequat aliquet urna. Quisque ut molestie augue. Mauris mollis lacinia ultrices. Sed malesuada ante id enim condimentum, non pharetra sem suscipit. Ut vel tortor aliquam ipsum posuere condimentum.
 
-Although this project was already [announced](/blog/pblog-launch.html) a couple days ago, I thought it might be best to actually breakdown `pblog` into greater detail.
+Nullam id viverra felis. Praesent suscipit, ante vel interdum tincidunt, risus ante posuere eros, vel dignissim dui est eu lacus. Integer mattis nec mi a pellentesque. Donec sed malesuada tortor. Suspendisse viverra in mi vitae molestie. Praesent orci felis, viverra at leo id, condimentum pulvinar elit. Nulla auctor eu velit vitae sollicitudin. Curabitur diam est, consequat sit amet egestas sollicitudin, sagittis in libero. Sed cursus turpis eu vehicula porta. Integer nec ultrices ipsum, nec dignissim ligula. In hac habitasse platea dictumst. Suspendisse eget lacus ac tortor imperdiet interdum vitae non lorem. Sed euismod efficitur lacus, eget pharetra lacus eleifend a. Phasellus vitae est erat. Vestibulum enim arcu, suscipit sit amet arcu ut, hendrerit mattis purus.
 
-Enough chit-chat, let's get into it!
+Nam pellentesque scelerisque ligula. Praesent aliquet lorem finibus aliquet maximus. Suspendisse potenti. Ut bibendum pharetra sapien eu pellentesque. Vestibulum sit amet maximus libero. Quisque in suscipit nunc, at condimentum neque. Vestibulum dignissim eleifend fermentum. Vivamus non nulla nec quam malesuada tincidunt. Mauris at odio vitae quam rhoncus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras condimentum porta odio ut accumsan. Sed vitae nibh et nulla venenatis tincidunt. Donec scelerisque commodo sapien, malesuada vestibulum purus faucibus sit amet. Etiam porttitor a felis vel elementum.
 
-### Main Goal
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse eu justo sem. Aliquam at lacus erat. Vestibulum rutrum ornare nibh ut luctus. Fusce urna dui, gravida eget metus ac, pretium tempor turpis. Sed eget ultrices tortor. Phasellus ultrices posuere facilisis.  Cras elementum cursus ligula. Nullam vulputate diam vel orci luctus, ac rhoncus nisi porttitor. Nunc ac elit nisl. Morbi suscipit dolor a venenatis tempor.  Aliquam accumsan ex enim, eget tempor urna tristique non. Aenean at lacus in erat dictum suscipit a sed massa. Donec risus nibh, hendrerit vitae dolor ac, dictum dapibus ligula. Ut et viverra erat, non mollis ex.G
 
-The entire purpose of `pblog` is to be as bare-bones as possible, while still maintaining a pleasant writing workflow. Users write their posts and pages in Markdown - *pblog* handles everything else:
+# another text for testing
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae leo rhoncus, eleifend orci eget, facilisis diam. Nullam faucibus felis sem, vel venenatis tortor fringilla ac. Sed varius dui et magna blandit placerat et et ipsum. Vestibulum sapien metus, dignissim vitae lorem in, egestas laoreet justo. Nam ac eros in nisl bibendum cursus. Suspendisse at pharetra ligula. Donec maximus sodales eros eu volutpat. Nullam ut est in ex hendrerit dignissim at eget velit.
 
-- Posts and pages generated via Pandoc with minimal CSS
-- RSS feed at `feed.xml`
-- Generated blog listing at `blog/index.html`
-- Browser-styled XML (in supported browsers)
+Fusce venenatis elit fermentum commodo dignissim. Praesent ac lectus lobortis, rutrum quam in, mattis lorem. Vivamus dignissim venenatis felis id consequat. Phasellus ligula tellus, rhoncus et elit ut, dictum mollis dolor. Vestibulum consequat aliquet urna. Quisque ut molestie augue. Mauris mollis lacinia ultrices. Sed malesuada ante id enim condimentum, non pharetra sem suscipit. Ut vel tortor aliquam ipsum posuere condimentum.
 
-### Site Structure
+Nullam id viverra felis. Praesent suscipit, ante vel interdum tincidunt, risus ante posuere eros, vel dignissim dui est eu lacus. Integer mattis nec mi a pellentesque. Donec sed malesuada tortor. Suspendisse viverra in mi vitae molestie. Praesent orci felis, viverra at leo id, condimentum pulvinar elit. Nulla auctor eu velit vitae sollicitudin. Curabitur diam est, consequat sit amet egestas sollicitudin, sagittis in libero. Sed cursus turpis eu vehicula porta. Integer nec ultrices ipsum, nec dignissim ligula. In hac habitasse platea dictumst. Suspendisse eget lacus ac tortor imperdiet interdum vitae non lorem. Sed euismod efficitur lacus, eget pharetra lacus eleifend a. Phasellus vitae est erat. Vestibulum enim arcu, suscipit sit amet arcu ut, hendrerit mattis purus.
 
-After you've cloned the [official pblog repo on sourcehut](https://git.btxx.org/pblog), the next thing you should do is edit the main `_config.sh` file in the root directory. This will give you a better understanding of how everything is built.
+Nam pellentesque scelerisque ligula. Praesent aliquet lorem finibus aliquet maximus. Suspendisse potenti. Ut bibendum pharetra sapien eu pellentesque. Vestibulum sit amet maximus libero. Quisque in suscipit nunc, at condimentum neque. Vestibulum dignissim eleifend fermentum. Vivamus non nulla nec quam malesuada tincidunt. Mauris at odio vitae quam rhoncus ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras condimentum porta odio ut accumsan. Sed vitae nibh et nulla venenatis tincidunt. Donec scelerisque commodo sapien, malesuada vestibulum purus faucibus sit amet. Etiam porttitor a felis vel elementum.
 
-Once generated, *pblog* structures the final website files as such:
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse eu justo sem. Aliquam at lacus erat. Vestibulum rutrum ornare nibh ut luctus. Fusce urna dui, gravida eget metus ac, pretium tempor turpis. Sed eget ultrices tortor. Phasellus ultrices posuere facilisis. Cras elementum cursus ligula. Nullam vulputate diam vel orci luctus, ac rhoncus nisi porttitor. Nunc ac elit nisl. Morbi suscipit dolor a venenatis tempor. Aliquam accumsan ex enim, eget tempor urna tristique non. Aenean at lacus in erat dictum suscipit a sed massa. Donec risus nibh, hendrerit vitae dolor ac, dictum dapibus ligula. Ut et viverra erat, non mollis ex.
 
-```shell
-_output/
-    |__blog/
-        |__index.html
-        |__blog-post-example.html
-    |__media/
-    |__feed.xml
-    |__index.html
-    |__rss.xsl
-    |__style.css
-```
-
-This structure is completely customizable by simply editing the `_config.sh` file (if you so desire).
-
-### Headers and Footers
-
-By default `pblog` will add the header and footer includes to every individual post and page. To edit these, simply open the `_header.html` and `_footer.html` files respectively.
-
-**Important**: To avoid rendering issues DO NOT remove the included `article` opening and closing tags within those files. Everything else you can edit, remove, etc.
-
-### Posts and Pages
-
-Posts and pages are written via Markdown inside the `posts` and `pages` folders respectively.
-
-Individual posts require the following headers (take note of the date format):
-
-```yaml
----
-title: Blog Title
-date: Mon, 04 Jul 2022
----
-```
-
-while individual pages only require a `title`:
-
-```yaml
----
-title: Page Title
----
-```
-
-This makes for an easier switch over from other SSG platforms like Jekyll or Hugo.
-
-### The Build Process
-
-The main variables at the top of the `pblog.sh` file need to edited with your own details before generating your website. Those variables are fairly self-explanatory and simple to edit.
-
-All you need to do now is run `make` (or `make serve` if you're looking to test locally) and you're done. Your website should now be fully generated inside the include `_output` directory. For quick reference:
-
-1. *pblog* converts your Markdown posts into two variations of HTML
-    - One is used specifically for rendering itself inside the RSS feed
-    - The other is used for linking in a browser
-2. Next, *pblog* converts your Markdown pages into HTML
-3. All of these generated HTML files are then moved to the `_output` folder
-
-*pblog* is also smart enough to automatically generate a main blog list directory for you. This `index.html` file is placed inside the `_output/blog` folder on build. You can see an example of the blog list [on this very website](/blog).
-
-### Uploading to the WWW
-
-Those with more experience will probably lean towards using a utility like `rsync` to sync the contents of their `_output` folder with their web server. For those with less experience, I recommend using something like [Netlify Drop](https://app.netlify.com/drop) to make things as friction-less as possible.
-
-### Wrapping Up
-
-There isn't much else to say. `pblog` is as static or flexible as you chose it to be. If you have any ideas on how to improve things or come across any bugs, please [open a ticket or PR on the official repo](https://git.sr.ht/~bt/pblog).
-
-Thanks and happy blogging with *pblog*!
