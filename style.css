@@ -91,7 +91,7 @@ a:hover {
 }
 
 #TOC ul {
-    padding-left: 10px;
+    padding-right: 10px;
     list-style-type: decimal;
 }
 
