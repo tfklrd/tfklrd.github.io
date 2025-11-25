@@ -78,12 +78,11 @@ a:hover {
 }
 
 #TOC {
-    border: 1px solid;
+    border-left: 5px solid white;
     display: block;
     position: relative;
 }
 #TOC:before {
-    border-bottom: 1px solid;
     content: 'Table of Contents';
     display: block;
     font-weight: bold;
@@ -92,6 +91,7 @@ a:hover {
 }
 
 #TOC ul {
+    padding-left: 10px;
     list-style-type: decimal;
 }
 
